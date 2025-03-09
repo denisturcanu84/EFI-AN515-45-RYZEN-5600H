@@ -1,5 +1,50 @@
 # Hackintosh EFI for Nitro AN515-45 (Ryzen 5 5600H)
 
+
+## Important Notice
+
+Before using this EFI folder, you **must** generate your own system identifiers, including MLB, SystemSerialNumber, and SystemUUID.
+
+### How to Generate Your Own System Identifiers
+
+1. **Download GenSMBIOS:**
+   - [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
+
+2. **Run GenSMBIOS:**
+   - Open GenSMBIOS and select option `1` to download the latest MacSerial.
+   - Select option `3` to generate SMBIOS.
+
+3. **Choose the Model:**
+   - For this configuration, use `MacBookPro16,3`.
+
+4. **Copy the Generated Values:**
+   - Copy the generated `MLB`, `SystemSerialNumber`, and `SystemUUID` into the corresponding fields in the `config.plist`.
+
+### Example
+
+Replace the following fields in the `config.plist` with your generated values:
+
+```xml
+<key>PlatformInfo</key>
+<dict>
+	<key>Generic</key>
+	<dict>
+		<key>MLB</key>
+		<string>YOUR_GENERATED_MLB</string>
+		<key>SystemSerialNumber</key>
+		<string>YOUR_GENERATED_SYSTEM_SERIAL_NUMBER</string>
+		<key>SystemUUID</key>
+		<string>YOUR_GENERATED_SYSTEM_UUID</string>
+	</dict>
+</dict>
+```
+
+## Usage
+
+1. **Copy the EFI folder to your EFI partition.**
+2. **Configure your BIOS settings as required.**
+3. **Boot from the USB drive or the EFI partition on your hard drive.**
+
 ## Specifications
 
 - **Model:** Nitro AN515-45
