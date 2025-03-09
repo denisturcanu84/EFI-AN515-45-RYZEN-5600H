@@ -52,7 +52,8 @@ Replace the following fields in the `config.plist` with your generated values:
 - **Integrated GPU:** AMD Radeon Vega Series
 - **Discrete GPU:** NVIDIA GeForce RTX 3060 Mobile / Max-Q // incompatible
 - **Display:** 1920x1080 @ 144 Hz
-- **RAM:** 16 GB 
+- **RAM:** 16 GB
+- **Wifi Card:** Mediatek (NOT WORKING but ethernet/USB tethering from android works)
 
 ## Files Included
 
